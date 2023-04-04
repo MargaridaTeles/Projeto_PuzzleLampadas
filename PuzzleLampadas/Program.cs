@@ -30,9 +30,20 @@ namespace PuzzleLampadas
                             new Botao(lampadas[1], lampadas[2])};*/
 
             int maxpress = 6;
+            bool ganhou = false;
             for (int i = 0; i < maxpress; i++)
             {
                 Console.WriteLine($"{i+1} Chance");
+                ganhou = true;
+
+                foreach(Lampada lampada in lampadas)
+                {
+                    Console.WriteLine($"Lampada({lampada}) ");
+                    if(lampada.Estado == LampadaEstado.Off)
+                    {
+                        ganhou  = false;
+                    }
+                }
             }
         }
     }
