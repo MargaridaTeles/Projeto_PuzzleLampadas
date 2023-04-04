@@ -1,5 +1,7 @@
 ﻿using System;
 using Lampada;
+using LampadaEstado;
+
 
 namespace PuzzleLampadas
 {
