@@ -9,6 +9,8 @@ namespace PuzzleLampadas
     public class Lampada{
         public LampadaEstado Estado {get; private set;} = LampadaEstado.Off;
         public string Nome {get; private set;}
+
+        public Lampada(string nome) => Nome = nome;
     }
     class Program
     {
@@ -23,9 +25,9 @@ namespace PuzzleLampadas
                                 new Lampada("Lampada 2"),
                                 new Lampada("Lampada 3")};
 
-            Botao[] botoes = {new Botao(lampadas[0]),
+            /*Botao[] botoes = {new Botao(lampadas[0]),
                             new Botao(lampadas[0], lampadas[1]),
-                            new Botao(lampadas[1], lampadas[2])};
+                            new Botao(lampadas[1], lampadas[2])};*/
 
             int maxpress = 6;
             for (int i = 0; i < maxpress; i++)
