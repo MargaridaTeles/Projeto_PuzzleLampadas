@@ -2,7 +2,7 @@ using System;
 
 namespace PuzzleLampadas
 {
-    enum LampadaEstado{
+    public enum LampadaEstado{
         Off, On
     }
     public class Lampada
