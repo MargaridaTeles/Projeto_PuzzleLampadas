@@ -35,5 +35,5 @@ Caso o utilizador ligue todas as Lâmpadas (3) e tiver pressionado 6 ou menos ve
 
 
 ## Referências
-[PDF disponibilizado pelo Professor Nuno](https://moodle.ensinolusofona.pt/pluginfile.php/569962/mod_resource/content/1/aula03.pdf)
+[PDF disponibilizado pelo Professor Nuno - Enumeration flags](https://moodle.ensinolusofona.pt/pluginfile.php/569962/mod_resource/content/1/aula03.pdf)
 
