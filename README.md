@@ -1,4 +1,4 @@
-# Projeto_PuzzleLampadas
+# Projeto 1 de Linguagens de Programação - **Puzzle das Lâmpadas**
 https://github.com/MargaridaTeles/Projeto_PuzzleLampadas
 
 ## Autoria:
