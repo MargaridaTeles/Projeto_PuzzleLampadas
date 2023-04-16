@@ -2,6 +2,11 @@ using System;
 
 namespace LampadaEstado
 {
+    /// <summary>
+    /// Cada membro representa bit numa sequência de bits
+    /// Atributo [Flags] indica que enum pode ser tratada como conjunto de bits
+    /// Permite ativar/desativar características bit a bit
+    /// </summary>
     [Flags]
     enum lampadas
     {

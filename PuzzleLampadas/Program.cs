@@ -18,9 +18,14 @@ namespace PuzzleLampadas
                 Objetivo: Ligar todas as lâmpadas apenas carregando
                 no máximo 6 vezes nos botões.
             */
+            /// <summary>
+            /// O programa mostra ao Utilizador as Lampadas e os Botoes existentes, pedindo assim que o utilizador
+            /// insira o numero da lampada que este pretenda ligar.
+            /// </summary>
             string[] Lampadas = {"Lampada Esquerda", "Lampada Meio", "Lampada Direita"};
             string[] Botoes = {"1", "2", "3"};
 
+            
             Console.WriteLine("\nObjetivo: Ligar todas as lâmpadas apenas carregando no máximo 6 vezes nos botões.");
             int maxpress = 0;
             bool ganhou = false;
@@ -39,15 +44,23 @@ namespace PuzzleLampadas
                 }
                 Console.Write("\n\nEscolha um botão de 1 a 3: ");
                 string input = Console.ReadLine();
+
+                /// Enquanto o utilizador não inserir um numero existente, o programa irá pedir um novo número
+                /// até este inserir um valor correto
                 while(!(input == Botoes[0] || input == Botoes[1] || input == Botoes[2]))
                 {
                     Console.Write("Por favor escolha um botão de 1 a 3: ");
                     input = Console.ReadLine();
                 }
+
+                /// Se o valor inserido for 1  faz switch da lampada esquerda
                 if(input == "1")
                 {
                     LampadasLigadas ^= lampadas.Lampada_esquerda;
                 }
+                
+                /// Se o valor inserido for 2 faz switch da lampada esquerda e do meio, 
+                /// se estas forem diferentes (uma ligada e outra desligada)
                 if(input == "2")
                 {
                     if(new[] {0, 6}.Contains((int)(LampadasLigadas & (lampadas.Lampada_meio | lampadas.Lampada_esquerda))))
@@ -60,6 +73,9 @@ namespace PuzzleLampadas
                         LampadasLigadas ^= lampadas.Lampada_meio;
                     }
                 }
+                                
+                /// Se o valor inserido for 3 faz switch da lampada direita e do meio, 
+                /// se estas forem diferentes (uma ligada e outra desligada)
                 if(input == "3")
                 {
                     if(new[] {0, 3}.Contains((int)(LampadasLigadas &(lampadas.Lampada_meio | lampadas.Lampada_direita))))
@@ -73,10 +89,16 @@ namespace PuzzleLampadas
                     }
                 }
                 
+                /// <summary>
+                /// Mostra as Lampadas que foram ligadas
+                /// </summary>
                 Console.WriteLine($"Ligou: {LampadasLigadas}");
                 maxpress++;
             }
-            
+
+            /// Verifica se as Lampadas Ligadas são 3 e se o utilizador 
+            /// pressionou no máximo 6 vezes os botões, se sim então ele ganha
+            /// senão ele perde
             if( (int)LampadasLigadas == 3 && maxpress <= 6 )
             {
                 ganhou = true;
